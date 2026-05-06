@@ -1,0 +1,438 @@
+/* LIGHT GRAPHIC / INFOGRAPHIC AI THEME - PAGINATED */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Screen Backgrounds */
+    --bg-dark: #e2e8f0; /* Outer viewer background */
+    --page-bg: #ffffff; /* Actual page color */
+    
+    /* Typography */
+    --text-main: #334155; /* Slate for body */
+    --text-muted: #64748b;
+    --text-dark: #0f172a; /* Deep navy for headings */
+    
+    /* Graphic Tech Accents */
+    --ai-blue: #0284c7; /* Tech Blue */
+    --ai-cyan: #0ea5e9;
+    --ai-purple: #7c3aed; /* Deep purple for AI feel */
+    --ai-teal: #0d9488;
+    --border-light: #e2e8f0;
+    --glass-bg: rgba(2, 132, 199, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', "Helvetica Neue", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 3rem 0;
+    /* Clean subtle grid for the outer viewport */
+    background-image: 
+        linear-gradient(#cbd5e1 1px, transparent 1px),
+        linear-gradient(90deg, #cbd5e1 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* 
+ * VIEWER
+ */
+.viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* 
+ * PHYSICAL PAGE: US Letter Size Simulation (8.5in x 11in)
+ */
+.physical-page {
+    width: 816px; /* 8.5 inches exactly at 96 DPI */
+    height: 1056px; /* 11 inches exactly */
+    background-color: var(--page-bg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Geometric top bar for graphic feel */
+.physical-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--ai-blue), var(--ai-purple));
+    z-index: 20;
+}
+
+/* Inner content area bounds (must match JS algorithm) */
+.page-content {
+    height: 1056px;
+    padding: 60px 60px; /* Safe print margins */
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+/* 
+ * BLOCKS 
+ */
+.block {
+    margin-bottom: 1.2rem;
+}
+.clear {
+    clear: both;
+    margin-bottom: 0;
+    height: 0;
+}
+
+/* Header Flexbox */
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.header-text {
+    flex: 1;
+}
+.header-photo img {
+    width: 140px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center; /* Focus on face for tall photos */
+    border-radius: 8px;
+    border: 3px solid var(--ai-blue);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32pt;
+    font-weight: 900;
+    color: var(--text-dark);
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-dark) 40%, var(--ai-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13pt;
+    color: var(--ai-blue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.terminal-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5pt;
+    color: #ffffff;
+    background: var(--ai-teal);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2);
+}
+
+.section-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14pt;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--ai-blue), var(--ai-purple));
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 6px 16px;
+    display: block;
+    width: fit-content;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+.bracket {
+    display: none; /* Hide brackets for clean graphic look */
+}
+
+/* Text */
+.text-block {
+    font-size: 10pt;
+    color: var(--text-main);
+    text-align: justify;
+    line-height: 1.6;
+    background-color: #f8fafc;
+    padding: 1.2rem;
+    border-left: 4px solid var(--ai-purple);
+    border-radius: 0 4px 4px 0;
+}
+
+/* Personal Data Grid */
+.data-item {
+    display: inline-block;
+    width: 48%;
+    font-size: 9.5pt;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 0.8rem;
+    vertical-align: top;
+    background-color: #f1f5f9;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+.data-label {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+/* Jobs - Infographic Timeline Style */
+.job {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--border-light);
+}
+
+/* The timeline node */
+.job::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--page-bg);
+    border: 3px solid var(--ai-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(2, 132, 199, 0.4);
+}
+
+.job-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+
+.job-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.3px;
+}
+
+.job-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: var(--ai-blue);
+    font-weight: 600;
+}
+
+.ai-list {
+    list-style: none;
+    font-size: 9.5pt;
+    color: var(--text-main);
+}
+
+.ai-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+    text-align: justify;
+}
+
+/* Graphic custom bullet points */
+.ai-list li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--border-light);
+    font-size: 8pt;
+}
+
+/* Projects */
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-top: 4px solid var(--ai-cyan);
+    padding: 1.2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.project-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12pt;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+.project-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--ai-purple);
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+.project-text {
+    font-size: 9.5pt;
+    color: var(--text-main);
+    text-align: justify;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+.project-tags span {
+    background: var(--glass-bg);
+    color: var(--ai-blue);
+    font-weight: 600;
+    font-size: 8pt;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(2, 132, 199, 0.2);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.2px;
+}
+
+/* Skills */
+.skill-group {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin-right: 1.5%;
+    margin-bottom: 1.5rem;
+}
+.skill-cat {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11pt;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.formation-item {
+    background: #f8fafc;
+    border: 1px solid var(--border-light);
+    padding: 1.2rem;
+    border-radius: 4px;
+}
+
+/* Visible AI JSON Block */
+.json-block {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7pt;
+    line-height: 1.5;
+    border: 1px solid var(--border-light);
+    border-left: 6px solid var(--ai-purple);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Center it vertically on the page */
+    justify-content: center;
+}
+.json-block pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+    width: 100%;
+}
+.json-block code {
+    color: var(--ai-teal);
+    font-weight: 600;
+}
+
+/* Inline ATS Hidden Element (Invisible to humans, readable by ATS/Bots) */
+.ats-hidden-inline {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    color: transparent;
+    z-index: -1;
+}
+
+/* Print Rules - Safe for actual printing / PDF export */
+@media print {
+    @page {
+        size: letter;
+        margin: 0; /* Let our CSS handle the margins to prevent scaling down */
+    }
+
+    body {
+        background: none;
+        padding: 0;
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* FIX: Gradients with text-fill transparent fail massively in some PDF engines */
+    h1 {
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: var(--text-dark) !important;
+        color: var(--text-dark) !important;
+    }
+
+    /* Fallback for section heading to ensure it prints reliably */
+    .section-heading {
+        background: var(--ai-blue) !important;
+        color: white !important;
+    }
+
+    .viewer {
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .physical-page {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 816px !important;
+        height: 1056px !important;
+        page-break-after: always;
+        break-after: page;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    /* Ensure the top gradient line prints */
+    .physical-page::before {
+        display: block !important;
+    }
+}
