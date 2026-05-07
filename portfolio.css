@@ -376,7 +376,15 @@
 @media print {
     @page {
         size: letter landscape;
-        margin: 10mm;
+        margin: 0; /* Important: Removes default browser headers/footers and white margins */
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: var(--p-bg-primary) !important;
     }
     
     .portfolio-mode {
@@ -390,6 +398,24 @@
         print-color-adjust: exact !important;
     }
 
+    /* Bugfix for Webkit grid printing: fallback to flex or block */
+    .p-grid-3, .p-grid-4 {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: stretch !important;
+        gap: 20px !important;
+    }
+    
+    .p-grid-3 > * {
+        flex: 1 1 calc(33.333% - 20px) !important;
+        box-sizing: border-box !important;
+    }
+    
+    .p-grid-4 > * {
+        flex: 1 1 calc(25% - 20px) !important;
+        box-sizing: border-box !important;
+    }
+
     /* Prevent page breaks inside cards and sections */
     .p-card, 
     .p-project-card, 
@@ -398,27 +424,59 @@
     .p-contact-item {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
+        /* margin-bottom to ensure flex items don't stick when wrapping */
+        margin-bottom: 10px;
     }
     
-    /* Ensure sections try to start on new pages if they don't fit, 
-       but don't force it unnecessarily */
+    /* Ensure sections try to start on new pages if they don't fit */
     .p-section {
         page-break-inside: auto;
+        page-break-before: auto;
+        /* Padding adjustments for 0 margin page */
+        padding: 30px 40px !important;
+        gap: 20px !important;
+        border-bottom: 2px solid var(--p-bg-inset); /* Separator since pages blend */
     }
     
-    /* Optimize spacing for landscape print */
-    .p-section {
-        padding: 40px 5% !important;
-        gap: 32px !important;
+    /* Special wrappers to keep headings with their content */
+    .print-keep-together {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        width: 100%;
     }
     
     .p-hero {
-        padding-top: 40px !important;
+        padding-top: 50px !important;
+        min-height: 100vh; /* Force hero to take full first page if possible */
     }
     
     .p-container {
-        gap: 32px !important;
+        gap: 20px !important;
+    }
+    
+    .top-navbar {
+        display: none !important;
     }
 
-    /* The top navbar is already hidden in styles.css for all print media */
+    /* Additional fixes for high-quality PDF print */
+    .p-section {
+        border-bottom: none !important;
+        margin-bottom: -1px !important; /* Overlap to prevent thin white lines */
+    }
+    
+    .p-card {
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        box-shadow: none !important;
+    }
+    
+    .p-title-lg, .p-title-md, .p-title-sm {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+    }
+    
+    /* Ensure the background is truly black in print */
+    .p-section-bg-inset { background-color: #0F172A !important; }
+    .p-section-bg-card { background-color: #1E293B !important; }
+    .p-hero { background: #0A0F1C !important; }
+
 }
