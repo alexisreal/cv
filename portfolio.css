@@ -139,12 +139,22 @@
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 3px solid transparent;
-    background: linear-gradient(var(--p-grad-start), var(--p-grad-end)) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
+    padding: 4px;
+    background: linear-gradient(var(--p-grad-start), var(--p-grad-end));
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-hero-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--p-bg-primary); /* In case image has transparency */
+    border: 4px solid var(--p-bg-primary); /* Creates the gap effect */
+    box-sizing: border-box;
 }
 .p-hero-photo img {
     width: 100%;
@@ -152,12 +162,7 @@
     border-radius: 50%;
     object-fit: cover;
 }
-/* A wrapper for the gradient border trick */
-.p-photo-wrapper {
-    width: 160px; height: 160px; border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(var(--p-grad-start), var(--p-grad-end));
-}
+
 
 .p-btn-primary {
     background: linear-gradient(90deg, var(--p-grad-start), var(--p-grad-end));
@@ -354,4 +359,14 @@
     .p-stats-row { flex-direction: column; gap: 24px; }
     .p-title-lg { font-size: 40px; }
     .p-title-md { font-size: 32px; }
+}
+
+.portfolio-mode h1, .portfolio-mode h2, .portfolio-mode h3, .portfolio-mode h4 {
+    text-transform: none;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: var(--p-text-primary) !important;
+    margin: 0;
+    padding: 0;
+    letter-spacing: normal;
 }
