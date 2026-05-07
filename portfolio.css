@@ -370,3 +370,55 @@
     padding: 0;
     letter-spacing: normal;
 }
+
+
+/* --- PRINT STYLES FOR LANDSCAPE PORTFOLIO --- */
+@media print {
+    @page {
+        size: letter landscape;
+        margin: 10mm;
+    }
+    
+    .portfolio-mode {
+        background-color: var(--p-bg-primary) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .portfolio-mode * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Prevent page breaks inside cards and sections */
+    .p-card, 
+    .p-project-card, 
+    .p-step,
+    .p-stat,
+    .p-contact-item {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    /* Ensure sections try to start on new pages if they don't fit, 
+       but don't force it unnecessarily */
+    .p-section {
+        page-break-inside: auto;
+    }
+    
+    /* Optimize spacing for landscape print */
+    .p-section {
+        padding: 40px 5% !important;
+        gap: 32px !important;
+    }
+    
+    .p-hero {
+        padding-top: 40px !important;
+    }
+    
+    .p-container {
+        gap: 32px !important;
+    }
+
+    /* The top navbar is already hidden in styles.css for all print media */
+}
