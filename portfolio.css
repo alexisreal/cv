@@ -1,0 +1,357 @@
+/* portfolio.css - Premium Web Layout for Portfolio Mode */
+
+:root {
+    --p-bg-primary: #0A0F1C;
+    --p-bg-inset: #0F172A;
+    --p-bg-card: #1E293B;
+    --p-bg-card-hover: #273548;
+    --p-accent: #22D3EE;
+    --p-accent-dim: #0E7490;
+    --p-border: #1E293B;
+    --p-grad-start: #22D3EE;
+    --p-grad-end: #0EA5E9;
+    --p-text-inverted: #0A0F1C;
+    --p-text-primary: #FFFFFF;
+    --p-text-secondary: #94A3B8;
+    --p-text-tertiary: #64748B;
+}
+
+/* Base styles when in portfolio mode */
+.portfolio-mode {
+    background-color: var(--p-bg-primary);
+    color: var(--p-text-primary);
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-mode * {
+    box-sizing: border-box;
+}
+
+.p-section {
+    width: 100%;
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.p-section-bg-inset { background-color: var(--p-bg-inset); }
+.p-section-bg-card { background-color: var(--p-bg-card); }
+
+.p-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* Typography */
+.p-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--p-accent);
+}
+
+.p-title-lg {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--p-text-primary);
+    margin: 0;
+}
+
+.p-title-md {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--p-text-primary);
+    margin: 0;
+}
+
+.p-title-sm {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--p-text-primary);
+    margin: 0;
+}
+
+.p-title-card {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--p-text-primary);
+    margin: 0;
+}
+
+.p-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--p-text-secondary);
+    max-width: 700px;
+}
+
+.p-desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--p-text-secondary);
+}
+
+/* Hero specific */
+.p-hero {
+    padding-top: 140px; /* space for navbar */
+    background: radial-gradient(circle at center, rgba(14, 116, 144, 0.3) 0%, var(--p-bg-primary) 70%);
+}
+
+.p-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--p-accent-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--p-accent);
+    letter-spacing: 2px;
+}
+
+.p-hero-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--p-accent);
+}
+
+.p-hero-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(var(--p-grad-start), var(--p-grad-end)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    position: relative;
+}
+.p-hero-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* A wrapper for the gradient border trick */
+.p-photo-wrapper {
+    width: 160px; height: 160px; border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(var(--p-grad-start), var(--p-grad-end));
+}
+
+.p-btn-primary {
+    background: linear-gradient(90deg, var(--p-grad-start), var(--p-grad-end));
+    color: var(--p-text-inverted);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 48px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.p-btn-primary:hover { opacity: 0.9; }
+
+.p-btn-secondary {
+    background: transparent;
+    color: var(--p-text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 48px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--p-text-tertiary);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.p-btn-secondary:hover { background: rgba(255,255,255,0.05); }
+
+/* Grid Layouts */
+.p-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.p-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Cards */
+.p-card {
+    background-color: var(--p-bg-card);
+    border: 1px solid var(--p-border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p-card-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--p-bg-inset);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--p-accent);
+}
+
+.p-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.p-tag {
+    background-color: var(--p-bg-inset);
+    color: var(--p-text-secondary);
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    padding: 6px 12px;
+    border-radius: 100px;
+}
+
+/* Project Cards */
+.p-project-card {
+    background-color: var(--p-bg-card);
+    border: 1px solid var(--p-border);
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.p-project-img {
+    width: 420px;
+    flex-shrink: 0;
+}
+.p-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-project-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    flex: 1;
+}
+
+/* Process Steps */
+.p-step {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.p-step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--p-accent);
+    color: var(--p-text-inverted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.p-step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Stats */
+.p-stats-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    border-top: 1px solid var(--p-border);
+    padding-top: 32px;
+}
+.p-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.p-stat-num {
+    color: var(--p-accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Footer / CTA */
+.p-contact-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.p-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--p-text-tertiary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+.p-contact-item svg { width: 16px; height: 16px; }
+
+@media (max-width: 900px) {
+    .p-grid-3, .p-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .p-project-card { flex-direction: column; }
+    .p-project-img { width: 100%; height: 250px; }
+}
+
+@media (max-width: 600px) {
+    .p-grid-3, .p-grid-4 { grid-template-columns: 1fr; }
+    .p-stats-row { flex-direction: column; gap: 24px; }
+    .p-title-lg { font-size: 40px; }
+    .p-title-md { font-size: 32px; }
+}
