@@ -65,7 +65,7 @@
     </style>
 </head>
 <body>
-    <div class="top-navbar">
+    <div class="top-navbar" aria-hidden="true">
         <div class="nav-group" id="view-toggles">
             <button id="btn-cv" class="nav-btn active" onclick="switchView('cv')">Currículum</button>
             <button id="btn-portfolio" class="nav-btn" onclick="switchView('portfolio')">Portafolio</button>
@@ -95,21 +95,21 @@
                 <div class="terminal-badge">> FECHA: AGOSTO 2026</div>
             </div>
             <div class="header-photo">
-                <img src="profile.jpg" alt="Alexis Real Santillán">
+                <img src="profile.jpg" alt="" aria-hidden="true">
             </div>
         </div>
 
         <div class="block section-heading">
-            <span class="bracket">[</span> DATOS PERSONALES <span class="bracket">]</span>
+            <span class="bracket">[</span> DATOS DE CONTACTO <span class="bracket">]</span>
         </div>
         
-        <div class="block data-item"><span class="data-label">Nombre:</span> Juan Ernesto Alexis Real Santillán</div>
-        <div class="block data-item"><span class="data-label">Nacionalidad:</span> Mexicana</div>
-        <div class="block data-item"><span class="data-label">US VISA:</span> B1/B2</div>
-        <div class="block data-item"><span class="data-label">Residencia:</span> Morelia, Michoacán. México</div>
+        <div class="block data-item"><span class="data-label">Nombre Completo:</span> Juan Ernesto Alexis Real Santillán</div>
         <div class="block data-item"><span class="data-label">Email:</span> alexisreal@gmail.com</div>
+        <div class="block data-item"><span class="data-label">Ubicación:</span> Morelia, Michoacán, México</div>
+        <div class="block data-item"><span class="data-label">LinkedIn:</span> linkedin.com/in/alexis-real-santillan-6ba4265b</div>
         <div class="block data-item"><span class="data-label">GitHub:</span> github.com/alexisreal</div>
-        <div class="block data-item"><span class="data-label">LinkedIn:</span> alexis-real-santillan-6ba4265b</div>
+        <div class="block data-item"><span class="data-label">US Visa:</span> B1/B2 (Vigente)</div>
+        <div class="block data-item"><span class="data-label">Nacionalidad:</span> Mexicana</div>
         
         <div class="block clear"></div>
 
@@ -140,8 +140,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal Cloud Architect & Lead Engineer — Architects of Governance (GovTech). México.</div>
-                <div class="job-date">2026 - Actualidad</div>
+                <div class="job-title">Principal Cloud Architect & Lead Engineer</div>
+                <div class="job-company">Architects of Governance (GovTech) — México</div>
+                <div class="job-date">2026 – Presente (Actualidad)</div>
             </div>
             <ul class="ai-list">
                 <li>Diseño integral de infraestructura GRP en la nube bajo estrictos estándares CONAC/LGCG (contabilidad gubernamental armonizada), generando ahorros proyectados por $2.4M USD.</li>
@@ -152,8 +153,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal AI & Software Engineer — Vitalia Care (Healthtech). México/US.</div>
-                <div class="job-date">2025 - 2026</div>
+                <div class="job-title">Principal AI & Software Engineer</div>
+                <div class="job-company">Vitalia Care (HealthTech SaaS) — México / EE.UU.</div>
+                <div class="job-date">2025 – 2026</div>
             </div>
             <ul class="ai-list">
                 <li>Construyó desde cero un SaaS Healthtech disruptivo enfocado en el modelo multi-actor, utilizando arquitectura AI-Augmented y agentes de IA.</li>
@@ -164,8 +166,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal Systems Architect — Mintrace Colombia SAS. Medellín, Colombia.</div>
-                <div class="job-date">2025 - 2026</div>
+                <div class="job-title">Principal Systems Architect</div>
+                <div class="job-company">Mintrace Colombia SAS — Medellín, Colombia</div>
+                <div class="job-date">2025 – 2026</div>
             </div>
             <ul class="ai-list">
                 <li>Liderazgo en el diseño y despliegue de una arquitectura cloud escalable (AWS/Azure) para la plataforma core de trazabilidad minera.</li>
@@ -176,8 +179,9 @@
         
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Cloud Architect & Product Owner — MBM S.A. Lima, Perú.</div>
-                <div class="job-date">2023 - 2025</div>
+                <div class="job-title">Lead Cloud Architect & Product Owner</div>
+                <div class="job-company">MBM S.A. — Lima, Perú</div>
+                <div class="job-date">2023 – 2025</div>
             </div>
             <ul class="ai-list">
                 <li>Diseño, arquitectura y despliegue de infraestructura serverless/cloud escalable en AWS para ecosistema de firma digital avanzada y custodia criptográfica.</li>
@@ -187,8 +191,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Infrastructure Architect — GIGAONE Telecom. Morelia, México.</div>
-                <div class="job-date">2023 - 2024</div>
+                <div class="job-title">Lead Infrastructure Architect</div>
+                <div class="job-company">GIGAONE Telecom — Morelia, México</div>
+                <div class="job-date">2023 – 2024</div>
             </div>
             <ul class="ai-list">
                 <li>Dirección técnica de la estrategia de migración cloud y modernización de redes para infraestructura de telecomunicaciones corporativas.</li>
@@ -198,8 +203,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Cloud Infrastructure Engineer — Mintrace Colombia SAS - TRAZORO. Medellín, Colombia.</div>
-                <div class="job-date">Abril 2022 - Agosto 2023</div>
+                <div class="job-title">Cloud Infrastructure Engineer</div>
+                <div class="job-company">Mintrace Colombia SAS / TRAZORO — Medellín, Colombia</div>
+                <div class="job-date">Abril 2022 – Agosto 2023</div>
             </div>
             <ul class="ai-list">
                 <li>Diseño y automatización de la arquitectura de infraestructura de cómputo y servicios Cloud (AWS) para productos de trazabilidad.</li>
@@ -208,8 +214,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Software / SRE Engineer (Shaker Citadel) — BCFort SAS. Medellín, Colombia.</div>
-                <div class="job-date">Septiembre 2021 - 2025</div>
+                <div class="job-title">Lead Software / SRE Engineer (Shaker Citadel)</div>
+                <div class="job-company">BCFort SAS — Medellín, Colombia</div>
+                <div class="job-date">Septiembre 2021 – 2025</div>
             </div>
             <ul class="ai-list">
                 <li>Arquitecturó el ecosistema Fintech (Citadel Core, Wallet, HSM, FIDO2) logrando una reducción comprobada del 78% en fraude transaccional.</li>
@@ -220,8 +227,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Consultor y Arquitecto de Soluciones - BCFort SAS. Medellín, Colombia</div>
-                <div class="job-date">Enero 2020 - Agosto 2021</div>
+                <div class="job-title">Consultor y Arquitecto de Soluciones Cloud</div>
+                <div class="job-company">BCFort SAS — Medellín, Colombia</div>
+                <div class="job-date">Enero 2020 – Agosto 2021</div>
             </div>
             <ul class="ai-list">
                 <li>Transformación, análisis y desarrollo de proyectos tech de escalado exponencial para startups tecnológicas.</li>
@@ -230,8 +238,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Senior Infrastructure & Data Engineering Lead — OOAPAS. Morelia, México.</div>
-                <div class="job-date">Junio 2020 - Octubre 2021</div>
+                <div class="job-title">Senior Infrastructure & Data Engineering Lead</div>
+                <div class="job-company">OOAPAS — Morelia, México</div>
+                <div class="job-date">Junio 2020 – Octubre 2021</div>
             </div>
             <ul class="ai-list">
                 <li>Administración de infraestructura crítica y modernización de sistemas de alta disponibilidad.</li>
@@ -242,8 +251,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Arquitecto de Software y Consultor de Desarrollo - BCFort SAS. Medellín, Colombia.</div>
-                <div class="job-date">2018 - 2020</div>
+                <div class="job-title">Arquitecto de Software y Consultor DevOps</div>
+                <div class="job-company">BCFort SAS — Medellín, Colombia</div>
+                <div class="job-date">2018 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>Gestión y arquitectura de proyectos de Blockchain, cloud computing, DevOps, Big Data e Inteligencia Artificial.</li>
@@ -252,8 +262,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Senior Cloud Solutions Architect — Weenjoy México, SAPI de CV</div>
-                <div class="job-date">2017 - 2020</div>
+                <div class="job-title">Senior Cloud Solutions Architect</div>
+                <div class="job-company">Weenjoy México, SAPI de CV — México</div>
+                <div class="job-date">2017 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>Despliegue y mantenimiento hands-on de infraestructura on-premise y public cloud en Azure y AWS (alta disponibilidad).</li>
@@ -264,8 +275,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Administrador de Redes de Cómputo y Comunicaciones - Instituto de Física y Matemáticas, UMSNH.</div>
-                <div class="job-date">2000 - 2020</div>
+                <div class="job-title">Administrador de Redes y Supercómputo HPC</div>
+                <div class="job-company">Instituto de Física y Matemáticas, UMSNH — Morelia, México</div>
+                <div class="job-date">2000 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>Encargado de todos los servicios a lo largo de más de 300 estaciones de trabajo y 100 usuarios especializados en cómputo científico.</li>
@@ -275,8 +287,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Especialista TI Adjunto & Arquitecto de Infraestructura — GES / Linux Open Source.</div>
-                <div class="job-date">2013 - Actualidad</div>
+                <div class="job-title">Especialista TI Adjunto & Arquitecto de Infraestructura</div>
+                <div class="job-company">GES / Linux Open Source — México</div>
+                <div class="job-date">2013 – Actualidad</div>
             </div>
             <ul class="ai-list">
                 <li>Consultoría estratégica y ejecución hands-on en modernización de infraestructura, seguridad perimetral y virtualización (VMware/KVM) para cajas de ahorro e instituciones financieras.</li>
@@ -287,7 +300,8 @@
         <div class="block job">
             <div class="job-header">
                 <div class="job-title">Trayectoria Previa en Consultoría, Sistemas Embebidos e Infraestructura Crítica Unix/Linux</div>
-                <div class="job-date">2000 - 2017</div>
+                <div class="job-company">Diversas Entidades Industriales, Financieras y de Gobierno</div>
+                <div class="job-date">2000 – 2017</div>
             </div>
             <ul class="ai-list">
                 <li><strong>Treofan México (2004 - 2014):</strong> Mantenimiento, soporte y alta disponibilidad de misión crítica en sistemas UNIX/Real-Time NonStop para líneas de manufactura industrial 24/7.</li>
@@ -298,8 +312,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">CTO — Linux Open Source de México.</div>
-                <div class="job-date">2001 - Actualidad</div>
+                <div class="job-title">CTO / Director de Tecnología</div>
+                <div class="job-company">Linux Open Source de México — México</div>
+                <div class="job-date">2001 – Actualidad</div>
             </div>
             <ul class="ai-list">
                 <li>Firma de consultoría en infraestructura crítica, cloud, ciberseguridad y cumplimiento normativo (linuxopensource.org), operando desde 1998 y constituida como S.A. de C.V. en 2001 — vehículo de mis engagements consultivos y de Fractional CTO.</li>
@@ -311,8 +326,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Consultor Privado en Sistemas de Computo de Alto Rendimiento y Transformación Digital.</div>
-                <div class="job-date">2000 - Actualidad</div>
+                <div class="job-title">Consultor Privado en Sistemas de Cómputo de Alto Rendimiento y Transformación Digital</div>
+                <div class="job-company">Consultoría Independiente</div>
+                <div class="job-date">2000 – Actualidad</div>
             </div>
             <ul class="ai-list">
                 <li>Investigación y desarrollo continuo en Agentes de IA, LLMs y Modelos Multimodales, aplicando sus capacidades avanzadas de razonamiento y orquestación para la resolución de problemas complejos y automatización de flujos de trabajo.</li>
@@ -470,21 +486,21 @@
                 <div class="terminal-badge">> DATE: AUGUST 2026</div>
             </div>
             <div class="header-photo">
-                <img src="profile.jpg" alt="Alexis Real Santillán">
+                <img src="profile.jpg" alt="" aria-hidden="true">
             </div>
         </div>
 
         <div class="block section-heading">
-            <span class="bracket">[</span> PERSONAL DATA <span class="bracket">]</span>
+            <span class="bracket">[</span> CONTACT INFORMATION <span class="bracket">]</span>
         </div>
         
-        <div class="block data-item"><span class="data-label">Name:</span> Juan Ernesto Alexis Real Santillán</div>
-        <div class="block data-item"><span class="data-label">Nationality:</span> Mexican</div>
-        <div class="block data-item"><span class="data-label">US VISA:</span> B1/B2</div>
-        <div class="block data-item"><span class="data-label">Location:</span> Morelia, Michoacan. Mexico</div>
+        <div class="block data-item"><span class="data-label">Full Name:</span> Juan Ernesto Alexis Real Santillán</div>
         <div class="block data-item"><span class="data-label">Email:</span> alexisreal@gmail.com</div>
+        <div class="block data-item"><span class="data-label">Location:</span> Morelia, Michoacan, Mexico</div>
+        <div class="block data-item"><span class="data-label">LinkedIn:</span> linkedin.com/in/alexis-real-santillan-6ba4265b</div>
         <div class="block data-item"><span class="data-label">GitHub:</span> github.com/alexisreal</div>
-        <div class="block data-item"><span class="data-label">LinkedIn:</span> alexis-real-santillan-6ba4265b</div>
+        <div class="block data-item"><span class="data-label">US Visa:</span> B1/B2 (Valid)</div>
+        <div class="block data-item"><span class="data-label">Nationality:</span> Mexican</div>
         
         <!-- Clearfix for floating/inline elements -->
         <div class="block clear"></div>
@@ -516,8 +532,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal Cloud Architect & Lead Engineer — Architects of Governance (GovTech). Mexico.</div>
-                <div class="job-date">2026 - Present</div>
+                <div class="job-title">Principal Cloud Architect & Lead Engineer</div>
+                <div class="job-company">Architects of Governance (GovTech) — Mexico</div>
+                <div class="job-date">2026 – Present</div>
             </div>
             <ul class="ai-list">
                 <li>Comprehensive design of cloud GRP infrastructure under strict CONAC/LGCG standards (harmonized government accounting), generating projected savings of $2.4M USD.</li>
@@ -528,8 +545,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal AI & Software Engineer — Vitalia Care (Healthtech). Mexico/US.</div>
-                <div class="job-date">2025 - 2026</div>
+                <div class="job-title">Principal AI & Software Engineer</div>
+                <div class="job-company">Vitalia Care (HealthTech SaaS) — Mexico / USA</div>
+                <div class="job-date">2025 – 2026</div>
             </div>
             <ul class="ai-list">
                 <li>Built a disruptive Healthtech SaaS from scratch focused on a multi-actor model, utilizing an AI-Augmented architecture and AI agents.</li>
@@ -540,8 +558,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Principal Systems Architect — Mintrace Colombia SAS. Medellin, Colombia.</div>
-                <div class="job-date">2025 - 2026</div>
+                <div class="job-title">Principal Systems Architect</div>
+                <div class="job-company">Mintrace Colombia SAS — Medellin, Colombia</div>
+                <div class="job-date">2025 – 2026</div>
             </div>
             <ul class="ai-list">
                 <li>Leadership in the design and deployment of a scalable cloud architecture (AWS/Azure) for the core mining traceability platform.</li>
@@ -552,8 +571,9 @@
         
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Cloud Architect & Product Owner — MBM S.A. Lima, Peru.</div>
-                <div class="job-date">2023 - 2025</div>
+                <div class="job-title">Lead Cloud Architect & Product Owner</div>
+                <div class="job-company">MBM S.A. — Lima, Peru</div>
+                <div class="job-date">2023 – 2025</div>
             </div>
             <ul class="ai-list">
                 <li>Designed, architected, and deployed a scalable AWS serverless/cloud infrastructure for an advanced digital signature and cryptographic custody ecosystem.</li>
@@ -563,8 +583,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Infrastructure Architect — GIGAONE Telecom. Morelia, Mexico.</div>
-                <div class="job-date">2023 - 2024</div>
+                <div class="job-title">Lead Infrastructure Architect</div>
+                <div class="job-company">GIGAONE Telecom — Morelia, Mexico</div>
+                <div class="job-date">2023 – 2024</div>
             </div>
             <ul class="ai-list">
                 <li>Technical leadership of the cloud migration strategy and network modernization for corporate telecom infrastructure.</li>
@@ -574,8 +595,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Cloud Infrastructure Engineer — Mintrace Colombia SAS - TRAZORO. Medellin, Colombia.</div>
-                <div class="job-date">April 2022 - August 2023</div>
+                <div class="job-title">Cloud Infrastructure Engineer</div>
+                <div class="job-company">Mintrace Colombia SAS / TRAZORO — Medellin, Colombia</div>
+                <div class="job-date">April 2022 – August 2023</div>
             </div>
             <ul class="ai-list">
                 <li>Design and automation of compute infrastructure architecture and Cloud services (AWS) for traceability products.</li>
@@ -584,8 +606,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Lead Software / SRE Engineer (Shaker Citadel) — BCFort SAS. Medellin, Colombia.</div>
-                <div class="job-date">September 2021 - 2025</div>
+                <div class="job-title">Lead Software / SRE Engineer (Shaker Citadel)</div>
+                <div class="job-company">BCFort SAS — Medellin, Colombia</div>
+                <div class="job-date">September 2021 – 2025</div>
             </div>
             <ul class="ai-list">
                 <li>Architected the Fintech ecosystem (Citadel Core, Wallet, HSM, FIDO2) achieving a proven 78% reduction in transactional fraud.</li>
@@ -596,8 +619,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Consultant and Solutions Architect - BCFort SAS. Medellin, Colombia.</div>
-                <div class="job-date">January 2020 - August 2021</div>
+                <div class="job-title">Consultant and Solutions Architect</div>
+                <div class="job-company">BCFort SAS — Medellin, Colombia</div>
+                <div class="job-date">January 2020 – August 2021</div>
             </div>
             <ul class="ai-list">
                 <li>Transformation, analysis, and development of exponential scaling tech projects for technology startups.</li>
@@ -606,8 +630,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Senior Infrastructure & Data Engineering Lead — OOAPAS. Morelia, Mexico.</div>
-                <div class="job-date">June 2020 - October 2021</div>
+                <div class="job-title">Senior Infrastructure & Data Engineering Lead</div>
+                <div class="job-company">OOAPAS — Morelia, Mexico</div>
+                <div class="job-date">June 2020 – October 2021</div>
             </div>
             <ul class="ai-list">
                 <li>Administration of critical infrastructure and modernization of high-availability systems.</li>
@@ -618,8 +643,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Software Architect and Development Consultant - BCFort SAS. Medellin, Colombia.</div>
-                <div class="job-date">2018 - 2020</div>
+                <div class="job-title">Software Architect and Development Consultant</div>
+                <div class="job-company">BCFort SAS — Medellin, Colombia</div>
+                <div class="job-date">2018 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>Management and architecture of Blockchain, cloud computing, DevOps, Big Data, and Artificial Intelligence projects.</li>
@@ -628,8 +654,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Senior Cloud Solutions Architect — Weenjoy Mexico, SAPI de CV.</div>
-                <div class="job-date">2017 - 2020</div>
+                <div class="job-title">Senior Cloud Solutions Architect</div>
+                <div class="job-company">Weenjoy Mexico, SAPI de CV — Mexico</div>
+                <div class="job-date">2017 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>Hands-on deployment and maintenance of on-premises and public cloud infrastructure in Azure and AWS (high availability).</li>
@@ -640,8 +667,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Computer and Communications Network Administrator - Institute of Physics and Mathematics, UMSNH.</div>
-                <div class="job-date">2000 - 2020</div>
+                <div class="job-title">Computer and Communications Network Administrator</div>
+                <div class="job-company">Institute of Physics and Mathematics, UMSNH — Morelia, Mexico</div>
+                <div class="job-date">2000 – 2020</div>
             </div>
             <ul class="ai-list">
                 <li>In charge of all services across more than 300 workstations and 100 users specialized in scientific computing.</li>
@@ -651,8 +679,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Adjunct IT Specialist & Infrastructure Architect — GES / Linux Open Source.</div>
-                <div class="job-date">2013 - Present</div>
+                <div class="job-title">Adjunct IT Specialist & Infrastructure Architect</div>
+                <div class="job-company">GES / Linux Open Source — Mexico</div>
+                <div class="job-date">2013 – Present</div>
             </div>
             <ul class="ai-list">
                 <li>Strategic consulting and hands-on execution in infrastructure modernization, perimeter security, and virtualization (VMware/KVM) for savings funds and financial entities.</li>
@@ -663,7 +692,8 @@
         <div class="block job">
             <div class="job-header">
                 <div class="job-title">Prior Trajectory in Consulting, Embedded Systems & Critical Unix/Linux Infrastructure</div>
-                <div class="job-date">2000 - 2017</div>
+                <div class="job-company">Various Industrial, Financial & Government Entities</div>
+                <div class="job-date">2000 – 2017</div>
             </div>
             <ul class="ai-list">
                 <li><strong>Treofan Mexico (2004 - 2014):</strong> Mission-critical maintenance, support, and high availability on UNIX/Real-Time NonStop systems for 24/7 industrial manufacturing lines.</li>
@@ -674,8 +704,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">CTO — Linux Open Source de México.</div>
-                <div class="job-date">2001 - Present</div>
+                <div class="job-title">CTO / Chief Technology Officer</div>
+                <div class="job-company">Linux Open Source de México — Mexico</div>
+                <div class="job-date">2001 – Present</div>
             </div>
             <ul class="ai-list">
                 <li>Consulting firm for critical infrastructure, cloud, cybersecurity, and regulatory compliance (linuxopensource.org), operating since 1998 and incorporated as S.A. de C.V. in 2001 — the vehicle for my consulting and Fractional CTO engagements.</li>
@@ -687,8 +718,9 @@
 
         <div class="block job">
             <div class="job-header">
-                <div class="job-title">Private Consultant in High-Performance Computing Systems and Digital Transformation.</div>
-                <div class="job-date">2000 - Present</div>
+                <div class="job-title">Private Consultant in High-Performance Computing Systems and Digital Transformation</div>
+                <div class="job-company">Independent Consulting</div>
+                <div class="job-date">2000 – Present</div>
             </div>
             <ul class="ai-list">
                 <li>Continuous research and development in AI Agents, LLMs, and Multimodal Models, applying advanced reasoning capabilities and orchestration for complex problem solving and workflow automation.</li>
