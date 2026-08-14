@@ -343,20 +343,17 @@ h2 {
 
 /* Visible AI JSON Block */
 .json-block {
-    background-color: #f1f5f9;
-    color: #0f172a;
-    padding: 2rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 0.9rem;
     border-radius: 8px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 7pt;
-    line-height: 1.5;
+    font-size: 6.2pt;
+    line-height: 1.35;
     border: 1px solid var(--border-light);
     border-left: 6px solid var(--ai-purple);
     margin: 0;
-    height: 100%;
-    display: flex;
-    align-items: center; /* Center it vertically on the page */
-    justify-content: center;
+    box-sizing: border-box;
 }
 .json-block pre {
     white-space: pre-wrap;
