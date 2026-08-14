@@ -76,7 +76,7 @@ body {
 /* Inner content area bounds (must match JS algorithm) */
 .page-content {
     height: 1056px;
-    padding: 60px 60px; /* Safe print margins */
+    padding: 40px 48px; /* Optimized safe print margins */
     overflow: hidden;
     position: relative;
     z-index: 10;
@@ -86,7 +86,7 @@ body {
  * BLOCKS 
  */
 .block {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 .clear {
     clear: both;
@@ -99,15 +99,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 0.9rem;
 }
 .header-text {
     flex: 1;
 }
 .header-photo img {
-    width: 140px;
-    height: 160px;
+    width: 130px;
+    height: 150px;
     object-fit: cover;
     object-position: top center; /* Focus on face for tall photos */
     border-radius: 8px;
@@ -124,7 +124,7 @@ h1 {
     letter-spacing: -1.5px;
     text-transform: uppercase;
     line-height: 1.1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     background: linear-gradient(135deg, var(--text-dark) 40%, var(--ai-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -132,20 +132,20 @@ h1 {
 
 h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: 13pt;
+    font-size: 12.5pt;
     color: var(--ai-blue);
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     letter-spacing: -0.5px;
 }
 
 .terminal-badge {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: #ffffff;
     background: var(--ai-teal);
     display: inline-block;
-    padding: 4px 10px;
+    padding: 3px 9px;
     border-radius: 20px;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2);
@@ -153,13 +153,13 @@ h2 {
 
 .section-heading {
     font-family: 'Outfit', sans-serif;
-    font-size: 14pt;
+    font-size: 13pt;
     font-weight: 800;
     color: #ffffff;
     background: linear-gradient(135deg, var(--ai-blue), var(--ai-purple));
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-    padding: 6px 16px;
+    margin-top: 0.9rem;
+    margin-bottom: 0.7rem;
+    padding: 4px 14px;
     display: block;
     width: fit-content;
     border-radius: 6px;
@@ -173,12 +173,12 @@ h2 {
 
 /* Text */
 .text-block {
-    font-size: 10pt;
+    font-size: 9.5pt;
     color: var(--text-main);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.55;
     background-color: #f8fafc;
-    padding: 1.2rem;
+    padding: 0.9rem 1.1rem;
     border-left: 4px solid var(--ai-purple);
     border-radius: 0 4px 4px 0;
 }
@@ -187,12 +187,12 @@ h2 {
 .data-item {
     display: inline-block;
     width: 48%;
-    font-size: 9.5pt;
+    font-size: 9pt;
     font-family: 'JetBrains Mono', monospace;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     vertical-align: top;
     background-color: #f1f5f9;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 4px;
 }
 .data-label {
@@ -204,8 +204,8 @@ h2 {
 /* Jobs - Infographic Timeline Style */
 .job {
     position: relative;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
+    padding-left: 1.8rem;
+    margin-bottom: 0.9rem;
     border-left: 2px solid var(--border-light);
 }
 
@@ -226,33 +226,33 @@ h2 {
 .job-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .job-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 13pt;
+    font-size: 12pt;
     font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     letter-spacing: -0.3px;
 }
 
 .job-date {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9pt;
+    font-size: 8.5pt;
     color: var(--ai-blue);
     font-weight: 600;
 }
 
 .ai-list {
     list-style: none;
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: var(--text-main);
 }
 
 .ai-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     position: relative;
     padding-left: 1.2rem;
     text-align: justify;
@@ -273,43 +273,43 @@ h2 {
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-top: 4px solid var(--ai-cyan);
-    padding: 1.2rem;
+    padding: 0.9rem 1.1rem;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 .project-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 12pt;
+    font-size: 11.5pt;
     font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     letter-spacing: -0.3px;
 }
 .project-label {
     font-family: 'Inter', sans-serif;
-    font-size: 9pt;
+    font-size: 8.5pt;
     font-weight: 700;
     color: var(--ai-purple);
-    margin-top: 0.8rem;
+    margin-top: 0.6rem;
     margin-bottom: 0.2rem;
 }
 .project-text {
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: var(--text-main);
     text-align: justify;
 }
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 0.5rem;
+    gap: 6px;
+    margin-top: 0.4rem;
 }
 .project-tags span {
     background: var(--glass-bg);
     color: var(--ai-blue);
     font-weight: 600;
-    font-size: 8pt;
-    padding: 4px 10px;
+    font-size: 7.5pt;
+    padding: 3px 8px;
     border-radius: 12px;
     border: 1px solid rgba(2, 132, 199, 0.2);
     font-family: 'Inter', sans-serif;
@@ -322,23 +322,23 @@ h2 {
     width: 48%;
     vertical-align: top;
     margin-right: 1.5%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 .skill-cat {
     font-family: 'Outfit', sans-serif;
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-light);
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     letter-spacing: -0.3px;
 }
 
 .formation-item {
     background: #f8fafc;
     border: 1px solid var(--border-light);
-    padding: 1.2rem;
+    padding: 0.9rem 1.1rem;
     border-radius: 4px;
 }
 
