@@ -437,3 +437,16 @@ h2 {
         display: block !important;
     }
 }
+
+/* Enlaces de verificación de la prueba pública: parte del texto, no decoración */
+.block a,
+.project-text a,
+.ai-list a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(37, 99, 235, 0.5);
+    text-underline-offset: 2px;
+}
+.block a:hover {
+    text-decoration-color: var(--ai-blue);
+}
