@@ -1,0 +1,15 @@
+{
+  "name": "cv-alexis-real",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CV y portafolio de servicios: una página que se pagina sola a hojas carta y exporta a PDF legible por parsers de reclutamiento.",
+  "scripts": {
+    "pdf": "node scripts/export-pdf.js",
+    "check": "node scripts/verificar-cv.js",
+    "build": "npm run pdf && npm run check"
+  },
+  "devDependencies": {
+    "pdf-parse": "^2.4.5",
+    "puppeteer": "^25.7.0"
+  }
+}

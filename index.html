@@ -6,6 +6,27 @@
     <title>Alexis Real Santillán — Forward Deployed Engineer | Arquitecto Cloud & IA | AI-Augmented Engineering</title>
     <meta name="description" content="CV y portafolio de servicios de Alexis Real Santillán: Fractional CTO, arquitectura cloud, ciberseguridad y compliance (HIPAA, CNBV, CONAC), ingeniería aumentada con agentes de IA. Director de Linux Open Source de México.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Juan Ernesto Alexis Real Santillán",
+      "alternateName": "Alexis Real Santillán",
+      "jobTitle": "Forward Deployed Engineer & Principal Cloud/AI Architect",
+      "email": "mailto:alexisreal@gmail.com",
+      "url": "https://alexisreal.github.io/cv/",
+      "address": { "@type": "PostalAddress", "addressLocality": "Morelia", "addressRegion": "Michoacán", "addressCountry": "MX" },
+      "worksFor": { "@type": "Organization", "name": "Linux Open Source de México", "url": "https://linuxopensource.org" },
+      "knowsLanguage": ["es", "en"],
+      "knowsAbout": ["Forward Deployed Engineering", "Cloud Architecture (AWS, Azure, GCP)", "Site Reliability Engineering", "Cybersecurity and Compliance (CNBV FAC4, HIPAA, SOC 2, ISO 27001)", "AI agents and LLMs in production", "Literate Driven Development", "TraceOps", "Kubernetes", "Go", "PostgreSQL"],
+      "sameAs": [
+        "https://www.linkedin.com/in/alexis-real-santillan-6ba4265b",
+        "https://github.com/alexisreal",
+        "https://linuxopensource.org",
+        "https://literatedriven.com"
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Top Navigation Bar */
@@ -512,7 +533,7 @@
 }</code></pre>
         </div>
     </div>
-    <div id="source-cv-en" class="cv-source" style="display: none;">
+    <script type="text/html" id="source-cv-en">
         <div class="block header-block">
             <div class="header-text">
                 <h1>ALEXIS REAL SANTILLÁN</h1>
@@ -936,8 +957,8 @@
   }
 }</code></pre>
         </div>
-    </div>
-    <div id="source-portfolio-es" class="cv-source" style="display: none;">
+    </script>
+    <script type="text/html" id="source-portfolio-es">
         
 <div class="block header-block" style="margin-bottom: 1rem; align-items: flex-start;">
     <div style="flex-shrink: 0;">
@@ -1109,8 +1130,8 @@
     </div>
 </div>
 
-    </div>
-    <div id="source-portfolio-en" class="cv-source" style="display: none;">
+    </script>
+    <script type="text/html" id="source-portfolio-en">
         
 <div class="block header-block" style="margin-bottom: 1rem; align-items: flex-start;">
     <div style="flex-shrink: 0;">
@@ -1282,7 +1303,7 @@
     </div>
 </div>
 
-    </div>
+    </script>
 
     <script>
         let currentView = 'cv';
@@ -1326,15 +1347,28 @@
             }
         }
 
+        /* Las fuentes que no se muestran viven en <script type="text/html"> para que un
+           parser de reclutamiento que solo quita etiquetas lea un CV y no cuatro documentos. */
+        const sourceCache = {};
+        function getSourceBlocks(sourceId) {
+            const el = document.getElementById(sourceId);
+            if (!el) return null;
+            if (el.tagName !== 'SCRIPT') return Array.from(el.children);
+            if (!sourceCache[sourceId]) {
+                const holder = document.createElement('div');
+                holder.innerHTML = el.textContent;
+                sourceCache[sourceId] = holder;
+            }
+            return Array.from(sourceCache[sourceId].children);
+        }
+
         function renderCV() {
             const viewer = document.getElementById('viewer');
             viewer.innerHTML = '';
             
             const sourceId = 'source-' + currentView + '-' + currentLang;
-            const source = document.getElementById(sourceId);
-            if (!source) return;
-            
-            const blocks = Array.from(source.children);
+            const blocks = getSourceBlocks(sourceId);
+            if (!blocks) return;
             
             let currentPage = createPage();
             let currentContent = currentPage.querySelector('.page-content');
